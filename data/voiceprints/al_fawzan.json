@@ -1,0 +1,131 @@
+{
+  "sheikh_id": "al_fawzan",
+  "name": "Sheikh Saleh Al-Fawzan",
+  "encoder": "resemblyzer",
+  "built": "2026-10-04 17:58",
+  "scoring": "centered",
+  "enroll": "ref+real",
+  "keep": 0.7,
+  "clips": 17,
+  "recordings": [
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_01.wav",
+      "windows": 4,
+      "main_voice": 0.0,
+      "mean_similarity": 0.3154,
+      "flag": "far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it"
+    },
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_02.wav",
+      "windows": 3,
+      "main_voice": 0.0,
+      "mean_similarity": 0.3604,
+      "flag": "far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it"
+    },
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_03.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.5617,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_04.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.5971,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_05.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.5412,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerB/speakerB_ref_06.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.5104,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_01.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.5818,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_04.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.6361,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_07.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.5613,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_10.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.5872,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_13.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.4893,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_16.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.5942,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_19.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.5959,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_22.wav",
+      "windows": 5,
+      "main_voice": 0.4,
+      "mean_similarity": 0.5038,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_25.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.5646,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_28.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.5919,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerB_real_31.wav",
+      "windows": 5,
+      "main_voice": 0.2,
+      "mean_similarity": 0.4304,
+      "flag": ""
+    }
+  ]
+}

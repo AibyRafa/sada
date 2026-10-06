@@ -1,0 +1,14 @@
+# Role 1's speaker names (data/manifest.csv, column "speaker") -> role 4 ids.
+# Taken from the "source" column of the manifest:
+#   speakerA = binbaz.org.sa, speakerB = Dr. Saleh Al-Fawzan channel, speakerC = Sheikh Al ash-Sheikh channel,
+#   speakerX = own recording (team member), tts1-3 = edge-tts generated speech.
+# Use "skip" to ignore a speaker.
+speakerA: ibn_baz
+speakerB: al_fawzan
+speakerC: al_alsheikh
+speakerX: other
+tts1: other
+tts2: other
+tts3: other
+test: skip
+test.wav: skip

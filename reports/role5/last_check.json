@@ -1,0 +1,81 @@
+{
+ "file": "speakerA_real_70.wav",
+ "claimed_sheikh": "ibn_baz",
+ "overall": "verified_excerpt",
+ "overall_ar": "مقتطع من تسجيل أصلي دون تعديل داخلي. ارجع للأصل للسياق الكامل.",
+ "voice": {
+  "status": "match",
+  "text_ar": "الصوت يطابق بصمة الشيخ عبدالعزيز بن باز. (مطابقة الصوت وحدها لا تثبت أن المقطع سليم.)",
+  "details": {
+   "score": 0.4426,
+   "best_match": "ibn_baz",
+   "per_sheikh": {
+    "al_alsheikh": 0.1414,
+    "al_fawzan": 0.3105,
+    "ibn_baz": 0.4426
+   },
+   "speaker_changes": []
+  }
+ },
+ "generated": {
+  "status": "original_recording",
+  "text_ar": "المقطع مأخوذ من تسجيل أصلي موجود في المكتبة، فهو ليس صوتًا مولّدًا.",
+  "details": {
+   "artifact_score": 0.008
+  }
+ },
+ "edited": {
+  "status": "not_edited",
+  "text_ar": "المقطع متصل كما في التسجيل الأصلي، دون قصّ أو وصل من الداخل.",
+  "details": {
+   "edits": [],
+   "pieces": [
+    {
+     "clip_start": 0.0,
+     "clip_end": 7.98,
+     "source": "raw/speakerA_video2.mp3",
+     "sheikh_id": "ibn_baz",
+     "orig_start": 552.0,
+     "orig_end": 559.98,
+     "similarity": 0.985
+    }
+   ]
+  }
+ },
+ "complete": {
+  "status": "excerpt",
+  "text_ar": "المقطع جزء من تسجيل أصلي أطول (speakerA_video2.mp3، مدته 10:50): يبدأ عند 9:12، وبعده 1:30 من الأصل غير موجودة في المقطع.",
+  "details": {
+   "status": "excerpt",
+   "source": "raw/speakerA_video2.mp3",
+   "sheikh_id": "ibn_baz",
+   "coverage": 1.0,
+   "original_duration": 650.19,
+   "missing_before": 552.0,
+   "missing_after": 90.21,
+   "cut_mid_speech_start": false,
+   "cut_mid_speech_end": false,
+   "best_score": 1.0
+  }
+ },
+ "conflicts": [],
+ "needs_human_review": false,
+ "review_reason_ar": null,
+ "disclaimer_ar": "صدى أداة آلية مدعومة بالذكاء الاصطناعي، وليست مختصًا بشريًا. تتحقق من الصوت فقط (صاحبه، وسلامته من التوليد والتعديل، واكتماله)، ولا تقيّم مضمون الكلام، ولا تصدر أي حكم شرعي أو فتوى، ولا تحكم على الأشخاص.",
+ "content_policy": {
+  "sada_output_level": "A",
+  "sada_output_ar": "معلومات تقنية عن الصوت فقط، كل معلومة موثقة بمصدرها (موضعها في التسجيل الأصلي أو النموذج المعاير).",
+  "clip_content": "not_evaluated",
+  "levels_ar": {
+   "A": "معلومات أصلية مستقرة: صدى يجيب عن الصوت فقط إجابة موثقة بموضعها في التسجيل الأصلي.",
+   "B": "شرح وتعريف واستدلال: إذا كان المقطع مقتطعًا يبيّن صدى موضعه في الأصل وما نقص منه، ويحيل للأصل لسماع الكلام في سياقه بدل الاعتماد على المقطع وحده.",
+   "C": "مسائل خلافية أو عالية الحساسية: صدى لا يرجّح ولا يشرح المسألة؛ يبيّن فقط هل الكلام ثابت النسبة إلى قائله.",
+   "D": "فتوى أو حالة شخصية: لا يقدّم صدى حكمًا ولا يطبّق الفتوى على حالة المستخدم، ويحيل إلى جهة مؤهلة."
+  },
+  "referral_ar": "إذا كان المقطع فتوى أو جوابًا عن حالة شخص بعينه، فصدى لا يقيّم مضمونه ولا يطبّقه على حالتك: ارجع إلى جهة مؤهلة مثل الرئاسة العامة للبحوث العلمية والإفتاء.",
+  "referral": {
+   "label": "الرئاسة العامة للبحوث العلمية والإفتاء",
+   "url": "https://alifta.gov.sa/ar/home"
+  }
+ }
+}

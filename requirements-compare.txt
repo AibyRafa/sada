@@ -1,0 +1,3 @@
+# Only for scripts/detectors.py (Sada vs public deepfake detectors). run_detectors.bat installs it.
+# Not needed by the app.
+transformers>=4.40

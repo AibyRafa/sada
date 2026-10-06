@@ -1,0 +1,11 @@
+identity:
+  backend: resemblyzer
+  scoring: centered
+  enroll: ref+real
+  low: 0.2801
+  high: 0.3675
+  window_sec: 3.0
+  hop_sec: 1.5
+  percentile: 75
+  change_similarity: 0.5483
+  calibrated: true

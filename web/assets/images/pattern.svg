@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <!-- Eight-point star lattice, a quiet nod to Islamic geometric ornament. -->
+  <g fill="none" stroke="#3b2d22" stroke-opacity="0.075" stroke-width="1">
+    <rect x="24" y="24" width="32" height="32"/>
+    <rect x="24" y="24" width="32" height="32" transform="rotate(45 40 40)"/>
+    <circle cx="40" cy="40" r="8"/>
+    <path d="M0 0 24 24M80 0 56 24M0 80 24 56M80 80 56 56"/>
+    <path d="M40 0v17.4M40 62.6V80M0 40h17.4M62.6 40H80"/>
+  </g>
+</svg>

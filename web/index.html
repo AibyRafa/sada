@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صدى — التحقق من أصالة المقاطع الصوتية</title>
+  <meta name="description" content="صدى أداة مدعومة بالذكاء الاصطناعي تساعد على التحقق من أصالة المقاطع الصوتية المنسوبة إلى العلماء المدعومين، بأدلة مفهومة يمكن تتبّعها إلى التسجيل الأصلي.">
+  <meta name="theme-color" content="#3b2d22">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script defer src="js/back-to-top.js"></script>
+</head>
+<body class="page-landing">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="صدى — الصفحة الرئيسية">
+        <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="40" height="40">
+        <span class="brand__text" aria-hidden="true">
+          <span class="brand__name">صدى</span>
+          <span class="brand__latin">SADA</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="أقسام الصفحة">
+        <ul>
+          <li><a href="#problem">المشكلة</a></li>
+          <li><a href="#how">كيف يعمل</a></li>
+          <li><a href="#outcomes">النتائج</a></li>
+          <li><a href="#safety">الموثوقية والسلامة</a></li>
+          <li><a href="#privacy">الخصوصية</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================================================================ Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-waveform"></use></svg>
+            صدى · تحقّق صوتي مدعوم بالذكاء الاصطناعي
+          </p>
+          <h1 id="hero-title" class="hero__title">تحقّق من أصالة المقطع الصوتي <span>قبل أن تثق به أو تشاركه</span></h1>
+          <p class="hero__lead">
+            صدى أداة تساعدك على تقييم ما إذا كان المقطع المنسوب إلى عالِم موثوق صوتًا أصليًا أم مولَّدًا أو معدَّلًا أو مقتطعًا من سياقه،
+            وتعرض لك أدلة مفهومة وموضع المقطع في تسجيله الأصلي — وتمتنع عن الحكم حين لا تكفي الأدلة.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="verify.html">
+              افحص المقطع الآن
+              <svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-arrow-forward"></use></svg>
+            </a>
+          </div>
+          <ul class="hero__facts">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-lock"></use></svg>لا يُحتفظ بالمقطع بعد الجلسة</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-user"></use></svg>دون إنشاء حساب</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-shield-minus"></use></svg>يمتنع عن الحكم عند عدم كفاية الأدلة</li>
+          </ul>
+        </div>
+
+        <!-- Illustrative preview of the product: no result values are shown here. -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual__card">
+            <div class="hero-visual__head">
+              <span class="chip">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-audio-file"></use></svg>
+                مقطع منسوب إلى شخصية مرجعية
+              </span>
+              <span class="hero-visual__time ltr">00:00 — 01:12</span>
+            </div>
+            <div class="hero-visual__wave">
+              <svg viewBox="0 0 356 80" focusable="false">
+                <rect class="hero-wave__band" x="135" y="4" width="62" height="72" rx="4"/>
+                <path class="hero-wave__base" fill="none" stroke-width="4" stroke-linecap="round" d="M6 35V45M14 31V49M22 26V54M30 30V50M38 22V58M46 17V63M54 24V56M62 29V51M70 33V47M78 28V52M86 20V60M94 13V67M102 18V62M110 25V55M118 30V50M126 33V47M134 31V49M198 34V46M206 29V51M214 23V57M222 18V62M230 23V57M238 29V51M246 32V48M254 27V53M262 20V60M270 15V65M278 22V58M286 28V52M294 32V48M302 35V45M310 30V50M318 25V55M326 29V51M334 33V47M342 35V45M350 36V44"/>
+                <path class="hero-wave__flag" fill="none" stroke-width="4" stroke-linecap="round" d="M142 26V54M150 21V59M158 16V64M166 11V69M174 19V61M182 26V54M190 31V49"/>
+              </svg>
+            </div>
+            <div class="hero-visual__paths">
+              <div class="hero-visual__path">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-fingerprint"></use></svg>
+                المسار (أ): البصمة الصوتية
+              </div>
+              <div class="hero-visual__path">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-sliders"></use></svg>
+                المسار (ب): الخصائص الصوتية
+              </div>
+            </div>
+            <p class="hero-visual__merge">
+              <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-merge"></use></svg>
+              دمج المؤشرات في مستوى ثقة واحد
+            </p>
+            <p class="hero-visual__label">النتيجة واحدة من ثلاث:</p>
+            <ul class="hero-visual__outcomes">
+              <li class="status-chip tone-authentic">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-shield-check"></use></svg>
+                مرجّح أن يكون أصليًا
+              </li>
+              <li class="status-chip tone-inconclusive">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-shield-minus"></use></svg>
+                غير حاسمة
+              </li>
+              <li class="status-chip tone-synthetic">
+                <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-shield-alert"></use></svg>
+                مرجّح أن يكون اصطناعيًا
+              </li>
+            </ul>
+            <p class="hero-visual__caption">معاينة توضيحية لطريقة العرض</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= Problem -->
+    <section id="problem" class="section" aria-labelledby="problem-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">المشكلة</p>
+          <h2 id="problem-title" class="section__title">سهولة الاستنساخ...وصعوبة التحقق</h2>
+          <p class="section__lead">
+            أصبحت أدوات استنساخ الصوت وتحويل النص إلى كلام متاحة على نطاق واسع، فبات إنتاج مقطع مقنع بصوت شخصية بعينها أمرًا يسيرًا.
+            ولا تتوفر في منصات المحتوى الإسلامي أداة مخصصة تساعد على تقييم أصالة هذه المقاطع قبل تصديقها أو مشاركتها.
+          </p>
+        </header>
+        <ul class="risk-grid">
+          <li class="risk-card">
+            <span class="risk-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-message-alert"></use></svg></span>
+            <h3>فتاوى مختلَقة</h3>
+            <p>مقاطع تُنسب إلى علماء موثوقين بأقوال لم تصدر عنهم، فتضلّل المتلقين وتسيء إلى أصحابها.</p>
+          </li>
+          <li class="risk-card">
+            <span class="risk-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-coins"></use></svg></span>
+            <h3>نداءات تبرع احتيالية</h3>
+            <p>استغلال أصوات شخصيات معروفة لجمع الأموال بطرق مضلِّلة.</p>
+          </li>
+          <li class="risk-card">
+            <span class="risk-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-mic"></use></svg></span>
+            <h3>كلام مقتطع من سياقه</h3>
+            <p>جزء من درس أو فتوى أطول يُنشر وحده، أو يُحذف من وسطه كلام، فيتغيّر المعنى المقصود.</p>
+          </li>
+        </ul>
+        <div class="audience">
+          <h3>لمن صُمّم صدى؟</h3>
+          <ul>
+            <li>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-share"></use></svg>
+              <span><strong>عموم المستخدمين</strong>كل من يصلهم مقطع ديني عبر المنصات الاجتماعية ويريدون تحققًا سريعًا مبنيًا على الأدلة قبل مشاركته.</span>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-users"></use></svg>
+              <span><strong>المشرفون والجهات المعنية</strong>المسؤولون عن التحقق من المحتوى والتعامل مع انتحال أصوات الشخصيات الموثوقة.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= How it works -->
+    <section id="how" class="section section--alt" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">كيف يعمل</p>
+          <h2 id="how-title" class="section__title">ثلاثة مسارات… ثم دمج حذر للمؤشرات</h2>
+          <p class="section__lead">
+            الذكاء الاصطناعي هو جوهر عملية التحقق في صدى: نموذج مُدرَّب مسبقًا لاستخلاص البصمة الصوتية، ومصنِّف خفيف للخصائص الصوتية،
+            ومعهما مقارنة دقيقة بالتسجيل الأصلي. ولا يُسمح لأي مسار بإصدار حكم منفرد.
+          </p>
+        </header>
+        <ol class="pipeline">
+          <li class="pipeline__step">
+            <span class="pipeline__num" aria-hidden="true">1</span>
+            <div>
+              <h3>رفع المقطع واختيار الشخصية المنسوب إليها</h3>
+              <p>ترفع المقطع وتحدد الشخصية التي يُنسب إليها من القائمة المرجعية المدعومة.</p>
+            </div>
+          </li>
+          <li class="pipeline__step">
+            <span class="pipeline__num" aria-hidden="true">2</span>
+            <div>
+              <h3>المعالجة المسبقة</h3>
+              <p>تحويل المقطع إلى صيغة موحدة (تردد 16 كيلوهرتز، وقناة واحدة) وتحديد مواضع الكلام فيه.</p>
+            </div>
+          </li>
+          <li class="pipeline__step">
+            <span class="pipeline__num" aria-hidden="true">3</span>
+            <div>
+              <h3>تحليل عبر ثلاثة مسارات مستقلة</h3>
+              <div class="pipeline__paths">
+                <div class="path-mini">
+                  <div class="path-mini__head">
+                    <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-fingerprint"></use></svg>المسار (أ): التحقق من الهوية الصوتية</h4>
+                    <span class="ai-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-cpu"></use></svg>ذكاء اصطناعي</span>
+                  </div>
+                  <p>تُقارَن بصمة الصوت بمكتبة صغيرة من التسجيلات المرجعية الموثقة باستخدام نموذج ترميز متحدّث مُدرَّب مسبقًا، ويُرصد التطابق المثالي على نحو غير طبيعي كما يُرصد عدم التطابق غير المتوقع.</p>
+                </div>
+                <div class="path-mini">
+                  <div class="path-mini__head">
+                    <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-sliders"></use></svg>المسار (ب): رصد آثار التوليد الاصطناعي</h4>
+                    <span class="ai-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-cpu"></use></svg>ذكاء اصطناعي</span>
+                  </div>
+                  <p>تُستخلص خصائص تختلف عادةً بين الكلام الطبيعي والمولَّد — ثبات طبقة الصوت، وتوزيع طاقة الترددات العالية، وانتظام التوقفات — ويقيّمها مصنِّف خفيف.</p>
+                </div>
+                <div class="path-mini">
+                  <div class="path-mini__head">
+                    <h4><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-waveform"></use></svg>المسار (ج): المقارنة بالتسجيل الأصلي</h4>
+                  </div>
+                  <p>يبحث صدى عن المقطع داخل التسجيلات الأصلية الموثقة ببصمة طيفية؛ فإن وجده حدّد موضعه فيها بالثانية، وكشف أي حذف أو وصل أو تغيير ترتيب، وهل قُطع المقطع والمتحدث ما زال يتكلم. وإن لم يجد الأصل قال ذلك صراحة، ولا يعدّه دليلًا على التزييف.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="pipeline__step">
+            <span class="pipeline__num" aria-hidden="true">4</span>
+            <div>
+              <h3>دمج المؤشرات</h3>
+              <p>لا تكفي مطابقة الصوت وحدها: يُرجَّح أن المقطع أصلي فقط إذا طابق الصوت البصمة ومعه دليل ثانٍ (وُجد في تسجيل أصلي، أو لم تظهر علامات توليد). وعند تعارض المؤشرات أو نقص الأدلة تكون النتيجة «غير حاسمة» مع طلب مراجعة بشرية.</p>
+            </div>
+          </li>
+          <li class="pipeline__step">
+            <span class="pipeline__num" aria-hidden="true">5</span>
+            <div>
+              <h3>النتيجة والأدلة والخطوة التالية</h3>
+              <p>إحدى ثلاث نتائج مع مستوى الثقة، وتمثيل طيفي يبرز المقاطع التي تستحق المراجعة، وتوصية بالتحقق من المصدر الرسمي عند الحاجة.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ Outcomes -->
+    <section id="outcomes" class="section" aria-labelledby="outcomes-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">النتائج</p>
+          <h2 id="outcomes-title" class="section__title">ثلاث نتائج… والامتناع جزء من التصميم</h2>
+          <p class="section__lead">لا يقدّم صدى حكمًا قاطعًا؛ فكل نتيجة ترجيحية مصحوبة بمستوى ثقة وأدلة وتوصية بالخطوة التالية.</p>
+        </header>
+        <ul class="outcome-grid">
+          <li class="outcome-card tone-authentic">
+            <div class="outcome-card__top">
+              <span class="outcome-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-shield-check"></use></svg></span>
+            </div>
+            <h3>مرجّح أن يكون أصليًا</h3>
+            <p>تتسق المؤشرات مع الصوت المرجعي للشخصية، دون آثار توليد اصطناعي ملحوظة. ويبقى المصدر الرسمي مرجعًا عند اعتماد المحتوى.</p>
+          </li>
+          <li class="outcome-card outcome-card--featured tone-inconclusive">
+            <div class="outcome-card__top">
+              <span class="outcome-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-shield-minus"></use></svg></span>
+              <span class="outcome-card__tag">نتيجة معتمدة</span>
+            </div>
+            <h3>غير حاسمة — ارجع إلى المصدر الرسمي</h3>
+            <p>حين لا تكفي المؤشرات لإصدار نتيجة موثوقة يمتنع صدى عن الحكم ويوصي بالتحقق عبر القناة الرسمية للشخصية. هذه نتيجة مقصودة وليست عطلًا.</p>
+          </li>
+          <li class="outcome-card tone-synthetic">
+            <div class="outcome-card__top">
+              <span class="outcome-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-shield-alert"></use></svg></span>
+            </div>
+            <h3>مرجّح أن يكون اصطناعيًا</h3>
+            <p>رُصدت مؤشرات تتسق مع صوت مولَّد أو معدَّل بالذكاء الاصطناعي، مع تحديد المقاطع التي تستحق المراجعة على التمثيل الطيفي.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================== Safety -->
+    <section id="safety" class="section section--alt" aria-labelledby="safety-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">الموثوقية والسلامة</p>
+          <h2 id="safety-title" class="section__title">صدى يساعد على التحقق، ولا يحلّ محل الحكم البشري المختص</h2>
+        </header>
+        <ul class="principles">
+          <li class="principle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-shield-minus"></use></svg>
+            <h3>الامتناع بالتصميم</h3>
+            <p>«غير حاسمة» نتيجة أصيلة في النظام وليست حلًّا احتياطيًا، وتُرفق دائمًا بتوصية التحقق من المصدر الرسمي.</p>
+          </li>
+          <li class="principle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-merge"></use></svg>
+            <h3>لا حكم من مسار منفرد</h3>
+            <p>لا يُسمح لأي من مساري التحليل بإصدار حكم نهائي بمفرده؛ فالنتيجة حصيلة دمج المؤشرات.</p>
+          </li>
+         
+          <li class="principle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-users"></use></svg>
+            <h3>مصادر الأصوات المرجعية</h3>
+            <p>تقتصر المكتبة المرجعية على شخصيات عامة لها تسجيلات علنية من مصادرها الرسمية، ولا تشمل أفرادًا عاديين.</p>
+          </li>
+          <li class="principle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-book"></use></svg>
+            <h3>نطاق محدد</h3>
+            <p>يقيّم صدى أصالة الصوت فقط؛ فلا يصدر فتوى، ولا يحكم على مضمون المقطع الشرعي أو على الأشخاص.</p>
+          </li>
+          <li class="principle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-flask"></use></svg>
+            <h3>أخلاقيات بيانات التدريب</h3>
+            <p>أي عينات صوتية اصطناعية تُنتج لتطوير النموذج تُستخدم داخليًا فقط، ولا تُنشر ولا تُوزَّع.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= Privacy -->
+    <section id="privacy" class="section" aria-labelledby="privacy-title">
+      <div class="container container--narrow">
+        <div class="privacy-panel">
+          <span class="privacy-panel__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-lock"></use></svg></span>
+          <div>
+            <p class="section__kicker">الخصوصية</p>
+            <h2 id="privacy-title">مقطعك للفحص فقط</h2>
+            <ul>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg>يُعالَج المقطع لغرض الجلسة فقط، ولا يُحتفظ به بشكل دائم.</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg>لا يتطلب صدى إنشاء حساب، ولا يطلب منك أي بيانات شخصية.</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg>يفصح صدى عن طبيعته أداةً مدعومة بالذكاء الاصطناعي، وليس مختصًا بشريًا.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= CTA -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div>
+            <h2 id="cta-title">وصلك مقطع منسوب إلى شخصية موثوقة؟</h2>
+            <p>تحقّق منه قبل أن تشاركه.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="verify.html">
+            افحص المقطع الآن
+            <svg class="icon icon--mirror" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-arrow-forward"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+     <div class="site-footer__mission">
+        <p class="site-footer__mission-label">رسالتنا</p>
+        <p class="site-footer__mission-text">صدى لا يتحقق من صوت من قالها فقط، بل يتحقق من أن ما قيل نُقل كما قيل</p>
+      </div> <br>
+    <div class="container site-footer__inner">
+      <div>
+      
+        <a class="brand" href="index.html" aria-label="صدى — الصفحة الرئيسية">
+          <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="40" height="40">
+          <span class="brand__text" aria-hidden="true">
+            <span class="brand__name">صدى</span>
+            <span class="brand__latin">SADA</span>
+          </span>
+        </a>
+        <p class="site-footer__disclaimer">صدى أداة مساعدة للتحقق من أصالة الصوت، ولا تُغني عن المصادر الرسمية والحكم البشري المختص.</p>
+      </div>
+      <div class="site-footer__meta">
+        <p>تحدي الذكاء الاصطناعي في خدمة المحتوى الإسلامي 2026</p>
+        <p>المسار الرابع: أدوات المعرفة والتحقق</p>
+      </div>
+     
+    </div>
+  </footer>
+</body>
+</html>

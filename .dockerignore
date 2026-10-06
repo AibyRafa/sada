@@ -1,0 +1,8 @@
+.git
+.venv
+.venv-role4
+cache
+**/__pycache__
+*.pyc
+*.zip
+reports/role5/run_log.txt

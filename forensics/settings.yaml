@@ -1,0 +1,14 @@
+# Role 5 settings. Written by scripts/forensics.py (calibrate / train). Do not edit by hand.
+compare:
+  match: 0.71
+  strong: 0.79
+  calibrated: true
+  negative_windows: 4297
+  positive_windows: 3608
+artifact:
+  low: 0.3
+  high: 0.5
+  calibrated: true
+splice:
+  threshold: 0.7999
+  usable: false

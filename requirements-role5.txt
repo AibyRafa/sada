@@ -1,0 +1,2 @@
+# Role 5 additions to the role-4 environment (.venv-role4). run_role5.bat installs these.
+imageio-ffmpeg>=0.5     # ffmpeg bundled as a pip package: reads the mp3 / m4a / mp4 originals in raw/

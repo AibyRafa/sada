@@ -1,0 +1,12 @@
+# Python environments (built on each machine by run_role5.bat)
+.venv/
+.venv-role4/
+# Rebuilt automatically
+cache/
+__pycache__/
+*.pyc
+# Archives
+*.zip
+# Never commit secrets
+.env
+*.key

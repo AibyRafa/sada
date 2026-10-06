@@ -1,0 +1,4 @@
+# Sada web app (role 3): the API server that also serves the frontend (web/). run_app.bat installs these.
+starlette>=0.40
+uvicorn>=0.30
+python-multipart>=0.0.9

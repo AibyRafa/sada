@@ -1,0 +1,46 @@
+clips: real 47, tts 15, spliced 30, cropped 15, cuts 40
+Sada done (273 s)
+loading garystafford/wav2vec2-deepfake-voice-detector (first time: download from Hugging Face)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   5%|▍         | 20/426 [00:00<00:02, 193.96it/s]Loading weights:   9%|▉         | 40/426 [00:00<00:02, 189.88it/s]Loading weights:  14%|█▍        | 59/426 [00:00<00:01, 184.44it/s]Loading weights:  19%|█▉        | 81/426 [00:00<00:01, 197.93it/s]Loading weights:  24%|██▎       | 101/426 [00:00<00:02, 159.45it/s]Loading weights:  28%|██▊       | 118/426 [00:00<00:02, 149.49it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 536.28it/s]
+loading mo-thecreator/Deepfake-audio-detection (first time: download from Hugging Face)...
+Loading weights:   0%|          | 0/215 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 30/215 [00:00<00:00, 296.93it/s]Loading weights:  28%|██▊       | 60/215 [00:00<00:00, 290.06it/s]Loading weights: 100%|██████████| 215/215 [00:00<00:00, 844.23it/s]
+garystafford/wav2vec2-deepfake-voice-detector done (602 s)
+mo-thecreator/Deepfake-audio-detection done (640 s)
+# Sada vs public deepfake detectors (2026-10-05 18:27)
+
+Same held-out clips as the other reports, clean audio. A detector "catches" a clip when it flags it as generated (its own decision, probability >= 0.5). Sada's answer for each group is written in the last column.
+
+## Detectors used
+
+- `garystafford/wav2vec2-deepfake-voice-detector`: Hugging Face, Apache-2.0; XLS-R 300M; trained on ElevenLabs, Amazon Polly, Kokoro, Hume AI, Speechify, Luvvoice + YouTube speech. Labels: {0: 'real', 1: 'fake'}; 'generated' = label 1.
+- `mo-thecreator/Deepfake-audio-detection`: Hugging Face, Apache-2.0; wav2vec2-base; training data not stated on its model card. Labels: {0: 'fake', 1: 'real'}; 'generated' = label 0.
+
+## Results
+
+| group | clips | `wav2vec2-deepfake-voice-detector` flagged as generated | `Deepfake-audio-detection` flagged as generated | Sada | what Sada had to say |
+|---|---|---|---|---|---|
+| real mufti clips (should NOT be flagged) | 47 | 0% | 98% | **0%** | said «edited / misattributed / generated» (a false alarm) |
+| generated speech (edge-tts) | 15 | 100% | 100% | **100%** | said «generated» or «not the sheikh's voice» |
+| real speech joined from two recordings | 30 | 0% | 67% | **100%** | found the join at the right second (±0.25 s) |
+| real speech cut out of a longer recording | 15 | 0% | 93% | **100%** | said «excerpt» with the right end in the original (±0.25 s) |
+| real mufti speech with words removed inside | 40 | 0% | 98% | **95%** | found the removed speech at the right second (±0.25 s) |
+
+Same task as the detectors, Sada's generated-speech check alone (score >= its calibrated threshold 0.50): real mufti clips flagged 0%, generated clips flagged 100%. (Sada's model was trained on other edge-tts clips of the same 3 voices; the detectors never saw these voices.)
+
+## Generated vs real only (the detectors' own task)
+
+| detector | AUC real vs generated (1.00 = perfect ranking) |
+|---|---|
+| `garystafford/wav2vec2-deepfake-voice-detector` | 1.00 |
+| `mo-thecreator/Deepfake-audio-detection` | 0.37 |
+
+## Limits of this comparison
+- Small data: the clip counts are in the table. Clean audio only.
+- The generated clips are 3 generic edge-tts voices, not voice clones of the muftis; a detector trained on
+  other generators may do better or worse on real clones.
+- The detectors are used as published, with their own 0.5 decision; they were not tuned on our data.
+- Sada's original search needs the original recording in its library; the detectors need nothing.
+- Sada's 'tts' answer includes «not the sheikh's voice»: the clip was attributed to a mufti, as in real use.
+
+report: reports\role5\detectors.md  (640 s)

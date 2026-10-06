@@ -1,0 +1,9 @@
+# Role 4 environment (.venv-role4). run_role4.bat installs these.
+# torch (CPU) is installed first by run_role4.bat from https://download.pytorch.org/whl/cpu
+numpy>=1.24
+scipy>=1.10,<2.0          # Resemblyzer imports scipy.ndimage.morphology (removed in SciPy 2.0)
+librosa>=0.10
+soundfile>=0.12
+webrtcvad-wheels>=2.0.10  # same `webrtcvad` module, prebuilt (plain webrtcvad needs a C compiler on Windows)
+pyyaml>=6.0
+# Resemblyzer itself: pip install --no-deps resemblyzer

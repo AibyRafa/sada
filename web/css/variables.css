@@ -1,0 +1,150 @@
+/* ==========================================================================
+   SADA — Design tokens
+   Palette derived from the SADA visual reference: warm paper, coffee ink,
+   brass accent and sage green. All colors, spacing and motion live here.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Raw palette ------------------------------------------------------ */
+  --palette-coffee-950: #1e1712;
+  --palette-coffee-900: #2a2019;
+  --palette-coffee-800: #3b2d22;
+  --palette-coffee-700: #4e3c2e;
+  --palette-coffee-600: #6b5b4c;
+  --palette-sand-50: #fffdf9;
+  --palette-sand-100: #fbf8f2;
+  --palette-sand-200: #f6f1e7;
+  --palette-sand-300: #ede4d4;
+  --palette-sand-400: #e0d3bd;
+  --palette-sand-500: #cdba9b;
+  --palette-brass-400: #c9a06a;
+  --palette-brass-500: #a9824f;
+  --palette-brass-700: #7e5d31;
+  --palette-sage-100: #e8f1eb;
+  --palette-sage-500: #6f9a7d;
+  --palette-sage-700: #2f6a4a;
+  --palette-teal-700: #0e6f65;
+
+  /* ---- Semantic colors -------------------------------------------------- */
+  --color-primary: var(--palette-coffee-800);
+  --color-primary-hover: var(--palette-coffee-700);
+  --color-primary-active: var(--palette-coffee-900);
+  --color-on-primary: #fbf6ec;
+  --color-secondary: var(--palette-sage-700);
+  --color-accent: var(--palette-brass-500);
+  --color-accent-soft: var(--palette-brass-400);
+  --color-accent-text: var(--palette-brass-700);
+
+  --color-background: var(--palette-sand-200);
+  --color-surface: var(--palette-sand-50);
+  --color-surface-muted: var(--palette-sand-100);
+  --color-surface-sunken: var(--palette-sand-300);
+  --color-border: var(--palette-sand-400);
+  --color-border-strong: var(--palette-sand-500);
+
+  --color-text: var(--palette-coffee-900);
+  --color-text-strong: var(--palette-coffee-950);
+  --color-muted: var(--palette-coffee-600);
+  --color-focus: var(--palette-teal-700);
+
+  /* Instrument panel (spectrogram) */
+  --color-instrument: #17120e;
+  --color-instrument-line: #3a2e24;
+  --color-instrument-text: #e9dcc4;
+  --color-instrument-muted: #b7a58a;
+  --color-flag: #e8a27a;
+  --color-flag-fill: rgba(232, 162, 122, 0.16);
+  --color-playhead: #fff4dc;
+
+  /* Waveform */
+  --wave-played: var(--palette-coffee-800);
+  --wave-rest: var(--palette-sand-500);
+
+  /* ---- Result status ---------------------------------------------------- */
+  --status-authentic: #2f6a4a;
+  --status-authentic-bg: #eaf3ed;
+  --status-authentic-border: #bcd6c5;
+
+  --status-inconclusive: #3b5878;
+  --status-inconclusive-bg: #ecf1f7;
+  --status-inconclusive-border: #c3d1e2;
+
+  --status-synthetic: #9b3a24;
+  --status-synthetic-bg: #faede8;
+  --status-synthetic-border: #e9c4b7;
+
+  /* Recoverable errors (distinct from the "synthetic" result color) */
+  --color-error: #8a4a0e;
+  --color-error-bg: #fcf2e3;
+  --color-error-border: #ebcb9c;
+
+  --color-info: #3b5878;
+  --color-info-bg: #ecf1f7;
+  --color-info-border: #c3d1e2;
+
+  /* ---- Typography ------------------------------------------------------- */
+  --font-sans: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-md: 1.1875rem;   /* 19px */
+  --text-lg: 1.375rem;    /* 22px */
+  --text-xl: 1.75rem;     /* 28px */
+  --text-2xl: clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem);
+  --text-3xl: clamp(2.125rem, 1.45rem + 2.8vw, 3.5rem);
+
+  --leading-tight: 1.3;
+  --leading-snug: 1.55;
+  --leading-normal: 1.8;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- Spacing ---------------------------------------------------------- */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-9: 6rem;     /* 96px */
+
+  /* ---- Radius ----------------------------------------------------------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation -------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(59, 45, 34, 0.06);
+  --shadow-md: 0 1px 2px rgba(59, 45, 34, 0.05), 0 10px 28px -14px rgba(59, 45, 34, 0.22);
+  --shadow-lg: 0 2px 4px rgba(59, 45, 34, 0.05), 0 24px 56px -24px rgba(59, 45, 34, 0.32);
+
+  /* ---- Layout ----------------------------------------------------------- */
+  --container-max: 1160px;
+  --container-narrow: 880px;
+  --gutter: var(--space-4);
+  --header-height: 68px;
+
+  /* ---- Motion ----------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 360ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ---- Layers ----------------------------------------------------------- */
+  --z-header: 10;
+  --z-popover: 50;
+
+  /* ---- Focus ------------------------------------------------------------ */
+  --focus-ring: 0 0 0 3px var(--color-surface), 0 0 0 5px var(--color-focus);
+}

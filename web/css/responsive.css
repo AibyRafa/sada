@@ -1,0 +1,350 @@
+/* ==========================================================================
+   SADA — Responsive adjustments
+   Desktop-first base styles; tablet (≤1024px) and mobile (≤640px) layouts.
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+  :root {
+    --gutter: var(--space-6);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    --gutter: var(--space-5);
+  }
+}
+
+/* ---- Tablet & small laptops ----------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-7);
+  }
+
+  .hero__copy {
+    max-inline-size: 720px;
+  }
+
+  .hero-visual {
+    max-inline-size: 560px;
+  }
+
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .audience {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .setup-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .setup-aside {
+    position: static;
+  }
+
+  .result-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 860px) {
+  .outcome-grid,
+  .risk-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .evidence-grid,
+  .split-grid,
+  .pipeline__paths {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- Header on narrow screens --------------------------------------------- */
+
+@media (max-width: 760px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+    padding-block: var(--space-3) var(--space-1);
+  }
+
+  .site-header__tools {
+    margin-inline-start: auto;
+  }
+
+  .site-nav {
+    order: 3;
+    inline-size: 100%;
+    margin-inline-start: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav ul {
+    gap: 0;
+  }
+
+  .site-nav a {
+    padding-inline: var(--space-2);
+  }
+
+  /* Short demo label keeps brand + pill on one row; full label stays for screen readers */
+  .demo-pill__label {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .demo-pill__label--short {
+    display: inline;
+  }
+
+  .audience ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer__meta {
+    text-align: start;
+  }
+}
+
+/* ---- Mobile --------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: var(--space-4);
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .section__head {
+    margin-block-end: var(--space-6);
+  }
+
+  .hero {
+    padding-block: var(--space-6) var(--space-8);
+  }
+
+  .hero__cta .btn {
+    inline-size: 100%;
+  }
+
+  .hero__facts {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .hero-visual {
+    padding-block-end: 10px;
+    padding-inline-end: 10px;
+  }
+
+  .hero-visual::before {
+    inset-block: 10px 0;
+    inset-inline: 10px 0;
+  }
+
+  .hero-visual__card {
+    padding: var(--space-4);
+  }
+
+  .hero-visual__paths {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .principles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pipeline__step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .pipeline__step:not(:last-child)::after {
+    inset-inline-start: calc(var(--space-4) + 22px);
+  }
+
+  .audience,
+  .privacy-panel,
+  .cta-band__inner {
+    padding: var(--space-5);
+  }
+
+  .privacy-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cta-band__inner .btn {
+    inline-size: 100%;
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
+
+  .card__head {
+    margin-block-end: var(--space-4);
+  }
+
+  .dropzone {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .file-card__actions {
+    inline-size: 100%;
+    margin-inline-start: 0;
+  }
+
+  .file-card__actions .btn {
+    flex: 1;
+  }
+
+  .speaker-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Compact stepper: dots for all steps, label for the current one */
+  .stepper {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .stepper__item {
+    flex: 0 0 auto;
+  }
+
+  .stepper__item[data-state="current"] {
+    flex: 1 1 auto;
+  }
+
+  .stepper__item:not([data-state="current"]) .stepper__label {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .processing-card,
+  .error-card {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .stage {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: var(--space-3);
+  }
+
+  .stage__state {
+    grid-column: 2;
+  }
+
+  .result-hero__grid {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .demo-flag {
+    padding-inline: var(--space-4);
+  }
+
+  .result-hero__status {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .result-hero__icon {
+    inline-size: 54px;
+    block-size: 54px;
+    border-radius: 16px;
+  }
+
+  .confidence {
+    padding: var(--space-4);
+  }
+
+  .next-action {
+    margin: 0 var(--space-4) var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .next-action .btn {
+    inline-size: 100%;
+  }
+
+  .result-section {
+    padding: var(--space-5) var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .path-card {
+    padding: var(--space-4);
+  }
+
+  .spectro__frame {
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding-inline: var(--space-1) var(--space-3);
+  }
+
+  .spectro__plot {
+    block-size: 180px;
+  }
+
+  .segment {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .segment .btn {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .result-actions .btn {
+    inline-size: 100%;
+  }
+}
+
+/* ---- Link input on narrow screens ----------------------------------------- */
+
+@media (max-width: 480px) {
+  .link-form__row .btn {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mission banner on narrow screens: smaller type, and room for the floating back-to-top button */
+@media (max-width: 640px) {
+  .site-footer__mission-text {
+    font-size: var(--text-lg);
+  }
+
+  .site-footer__mission {
+    padding-block-end: var(--space-7);
+  }
+}

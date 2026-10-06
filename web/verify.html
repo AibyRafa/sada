@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فحص مقطع صوتي — صدى</title>
+  <meta name="description" content="ارفع مقطعًا صوتيًا منسوبًا إلى شخصية مرجعية، واحصل على نتيجة ترجيحية مع مستوى ثقة وأدلة وتوصية بالخطوة التالية.">
+  <meta name="theme-color" content="#3b2d22">
+  <!-- API mode: "mock" (in-browser demo) or "live" (FastAPI). Override with ?mode=live -->
+  <meta name="sada-api-mode" content="live">
+  <!-- Backend origin for live mode; leave empty when FastAPI serves this page. -->
+  <meta name="sada-api-base" content="">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/app.js"></script>
+  <script defer src="js/back-to-top.js"></script>
+</head>
+<body class="page-verify">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="صدى — الصفحة الرئيسية">
+        <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="40" height="40">
+        <span class="brand__text" aria-hidden="true">
+          <span class="brand__name">صدى</span>
+          <span class="brand__latin">SADA</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="روابط مساعدة">
+        <ul>
+          <li><a href="index.html#how">كيف يعمل</a></li>
+          <li><a href="index.html#safety">الموثوقية والسلامة</a></li>
+          <li><a href="index.html#privacy">الخصوصية</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools" id="demo-slot"></div>
+    </div>
+  </header>
+
+  <main id="main" class="app" tabindex="-1">
+    <div class="container">
+      <div class="notice" id="file-protocol-notice" hidden>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-alert"></use></svg>
+        <p>
+          افتح المشروع عبر خادم محلي لتعمل أداة الفحص، مثل: <code>npx serve .</code> أو <code>python -m http.server 8000</code>
+          ثم زر <code>http://localhost:8000/verify.html</code>.
+        </p>
+      </div>
+      <noscript>
+        <p class="notice">يتطلب فحص المقاطع تفعيل JavaScript في المتصفح.</p>
+      </noscript>
+
+      <header class="app-head">
+        <h1 class="app-head__title">فحص مقطع صوتي</h1>
+        <p class="app-head__lead">
+          ارفع المقطع، واختر الشخصية المنسوب إليها، ثم ابدأ الفحص. ستحصل على نتيجة ترجيحية مع مستوى ثقة وأدلة وتوصية بالخطوة التالية.
+        </p>
+        <ol class="stepper" id="stepper" aria-label="مراحل الفحص">
+          <li class="stepper__item" data-step="1">
+            <span class="stepper__dot" aria-hidden="true"><span class="stepper__num">1</span><svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <span class="stepper__label">المقطع الصوتي</span>
+            <span class="stepper__status visually-hidden"></span>
+          </li>
+          <li class="stepper__item" data-step="2">
+            <span class="stepper__dot" aria-hidden="true"><span class="stepper__num">2</span><svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <span class="stepper__label">الشخصية المنسوب إليها</span>
+            <span class="stepper__status visually-hidden"></span>
+          </li>
+          <li class="stepper__item" data-step="3">
+            <span class="stepper__dot" aria-hidden="true"><span class="stepper__num">3</span><svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <span class="stepper__label">الفحص</span>
+            <span class="stepper__status visually-hidden"></span>
+          </li>
+          <li class="stepper__item" data-step="4">
+            <span class="stepper__dot" aria-hidden="true"><span class="stepper__num">4</span><svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg></span>
+            <span class="stepper__label">النتيجة</span>
+            <span class="stepper__status visually-hidden"></span>
+          </li>
+        </ol>
+      </header>
+
+      <!-- ============================================================ Setup -->
+      <section class="view" data-view="setup" aria-labelledby="setup-title">
+        <h2 id="setup-title" class="visually-hidden" tabindex="-1">إعداد الفحص</h2>
+        <div class="setup-grid">
+          <div class="setup-main">
+            <!-- Step 1: audio -->
+            <section class="card step-card" id="step-audio" aria-labelledby="step-audio-title">
+              <header class="card__head">
+                <span class="step-badge" aria-hidden="true">
+                  <span class="step-badge__num">1</span>
+                  <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg>
+                </span>
+                <div>
+                  <h3 id="step-audio-title" class="card__title">المقطع الصوتي</h3>
+                  <p class="card__subtitle">ارفع المقطع المتداول الذي تريد التحقق منه.</p>
+                </div>
+              </header>
+
+              <label class="dropzone" id="dropzone" for="file-input">
+                <input type="file" id="file-input" class="visually-hidden" aria-describedby="dropzone-hint">
+                <span class="dropzone__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-upload"></use></svg></span>
+                <span class="dropzone__title">اسحب المقطع (صوت أو فيديو) وأفلته هنا</span>
+                <span class="dropzone__or">أو</span>
+                <span class="btn btn--secondary btn--sm dropzone__btn">اختر مقطعًا من جهازك</span>
+                <span class="dropzone__hint" id="dropzone-hint"></span>
+              </label>
+
+              <form class="link-form" id="link-form" novalidate>
+                <label class="link-form__label" for="link-input">أو الصق رابط المقطع</label>
+                <div class="link-form__row">
+                  <input type="url" id="link-input" class="link-form__input" dir="ltr" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://example.com/audio.mp3" aria-describedby="link-hint">
+                  <button type="submit" class="btn btn--secondary" id="link-submit">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-link"></use></svg>
+                    جلب المقطع
+                  </button>
+                  <button type="button" class="btn btn--ghost" id="link-cancel" hidden>إلغاء</button>
+                </div>
+                <p class="link-form__hint" id="link-hint"></p>
+              </form>
+
+              <p class="inline-status" id="file-loading" hidden>
+                <span class="spinner" aria-hidden="true"></span>
+                جارٍ قراءة الملف…
+              </p>
+
+              <div class="alert alert--error" id="file-error" hidden></div>
+
+              <div class="file-card" id="file-card" hidden>
+                <div class="file-card__head">
+                  <span class="file-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-audio-file"></use></svg></span>
+                  <div class="file-card__meta">
+                    <p class="file-card__name" id="file-name"></p>
+                    <p class="file-card__details" id="file-details"></p>
+                  </div>
+                  <div class="file-card__actions">
+                    <button type="button" class="btn btn--ghost btn--sm" id="file-replace">
+                      <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-replace"></use></svg>
+                      استبدال
+                    </button>
+                    <button type="button" class="btn btn--ghost btn--sm" id="file-remove">
+                      <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-close"></use></svg>
+                      إزالة
+                    </button>
+                  </div>
+                </div>
+                <div class="waveform" dir="ltr">
+                  <canvas id="waveform-canvas" class="waveform__canvas" role="img" aria-label="الموجة الصوتية للمقطع. استخدم شريط التشغيل لتغيير الموضع."></canvas>
+                  <p id="waveform-fallback" class="waveform__fallback" dir="rtl" hidden>تعذّر رسم الموجة الصوتية لهذا الملف في المتصفح، ويمكنك متابعة الفحص.</p>
+                </div>
+                <div id="setup-player"></div>
+              </div>
+            </section>
+
+            <!-- Step 2: attributed speaker -->
+            <section class="card step-card" id="step-speaker" aria-labelledby="step-speaker-title">
+              <header class="card__head">
+                <span class="step-badge" aria-hidden="true">
+                  <span class="step-badge__num">2</span>
+                  <svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-check"></use></svg>
+                </span>
+                <div>
+                  <h3 id="step-speaker-title" class="card__title">الشخصية المنسوب إليها</h3>
+                  <p class="card__subtitle">اختر الشخصية التي يُنسب إليها المقطع من القائمة المرجعية المدعومة.</p>
+                </div>
+              </header>
+              <fieldset class="speaker-fieldset">
+                <legend class="visually-hidden">الشخصية المنسوب إليها المقطع</legend>
+                <div class="speaker-list" id="speaker-list" aria-busy="true"></div>
+              </fieldset>
+              <div class="alert alert--error" id="speaker-error" hidden></div>
+              <p class="helper-note" id="speaker-note" hidden></p>
+              <details class="disclosure">
+                <summary>
+                  لماذا تقتصر القائمة على شخصيات محددة؟
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-chevron-down"></use></svg>
+                </summary>
+                <p>
+                  يقارن صدى المقطع بتسجيلات مرجعية موثقة، لذا تقتصر المكتبة على عدد محدود من الشخصيات العامة التي تتوفر لها تسجيلات علنية من مصادرها الرسمية،
+                  ويُعتمد اختيارها بمراجعة شرعية. هذا القيد مقصود لضمان موثوقية المقارنة ومنع انتحال الأفراد.
+                  إن كان المقطع منسوبًا إلى شخصية غير مدرجة فلا يمكن التحقق منه هنا؛ ننصح حينها بالرجوع إلى مصدرها الرسمي مباشرة.
+                </p>
+              </details>
+            </section>
+          </div>
+
+          <!-- Step 3: pre-check -->
+          <aside class="setup-aside" aria-labelledby="precheck-title">
+            <section class="card precheck">
+              <header class="card__head">
+                <span class="step-badge" aria-hidden="true"><span class="step-badge__num">3</span></span>
+                <div>
+                  <h3 id="precheck-title" class="card__title">مراجعة قبل الفحص</h3>
+                  <p class="card__subtitle">تأكد من البيانات ثم ابدأ.</p>
+                </div>
+              </header>
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>المقطع</dt>
+                  <dd id="sum-file" class="plaintext is-empty">لم يُحدَّد بعد</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>الشخصية المنسوب إليها</dt>
+                  <dd id="sum-speaker" class="is-empty">لم تُحدَّد بعد</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>مدة التسجيل</dt>
+                  <dd id="sum-duration" class="is-empty">—</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>نوع التحقق</dt>
+                  <dd>ثلاثة مسارات: البصمة الصوتية + خصائص التوليد + المقارنة بالأصل</dd>
+                </div>
+              </dl>
+              <button type="button" class="btn btn--primary btn--lg btn--block" id="analyze-btn" aria-describedby="analyze-hint" disabled>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-waveform"></use></svg>
+                افحص المقطع
+              </button>
+              <p class="precheck__hint" id="analyze-hint" aria-live="polite"></p>
+              <div class="privacy-note">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-lock"></use></svg>
+                <div>
+                  <p><strong>الخصوصية:</strong> يُعالَج المقطع لغرض هذه الجلسة فقط ولا يُحتفظ به بشكل دائم.</p>
+                  <p id="privacy-mode-note" hidden></p>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ======================================================= Processing -->
+      <section class="view" data-view="processing" aria-labelledby="processing-title" hidden>
+        <div class="card processing-card">
+          <div class="processing-card__head">
+            <div class="processing-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h2 id="processing-title" class="processing-card__title" tabindex="-1">جارٍ تحليل المقطع</h2>
+            <p class="processing-card__meta"><bdi id="processing-file"></bdi> · <span id="processing-speaker"></span></p>
+          </div>
+          <ol class="stage-list" id="stage-list" aria-label="مراحل التحليل"></ol>
+          <div class="processing-card__foot">
+            <p class="processing-card__elapsed">الوقت المنقضي: <span class="ltr" id="elapsed">00:00</span></p>
+            <button type="button" class="btn btn--secondary" id="cancel-btn">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#i-close"></use></svg>
+              إلغاء الفحص
+            </button>
+          </div>
+          <p class="processing-card__note" id="processing-note"></p>
+        </div>
+      </section>
+
+      <!-- =========================================================== Result -->
+      <section class="view" data-view="result" aria-labelledby="result-title" hidden>
+        <div id="result-root"></div>
+      </section>
+
+      <!-- ============================================================ Error -->
+      <section class="view" data-view="error" aria-labelledby="error-title" hidden>
+        <div class="card error-card">
+          <span class="error-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="assets/icons/sprite.svg#i-alert"></use></svg></span>
+          <h2 id="error-title" class="error-card__title" tabindex="-1"></h2>
+          <dl class="explain-list">
+            <div><dt>ما الذي حدث؟</dt><dd id="error-detail"></dd></div>
+            <div><dt>السبب</dt><dd id="error-why"></dd></div>
+            <div><dt>ماذا يمكنك أن تفعل؟</dt><dd id="error-next"></dd></div>
+          </dl>
+          <div class="error-card__actions" id="error-actions"></div>
+          <p class="error-card__note">ما يزال المقطع واختيارك محفوظين في هذه الصفحة لتتمكن من المتابعة.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <audio id="sada-audio" preload="metadata" hidden></audio>
+  <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+     <div class="site-footer__mission">
+        <p class="site-footer__mission-label">رسالتنا</p>
+        <p class="site-footer__mission-text">صدى لا يتحقق من صوت من قالها فقط، بل يتحقق من أن ما قيل نُقل كما قيل</p>
+      </div>
+    <div class="container site-footer__inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="صدى — الصفحة الرئيسية">
+          <img class="brand__mark" src="assets/icons/favicon.svg" alt="" width="40" height="40">
+          <span class="brand__text" aria-hidden="true">
+            <span class="brand__name">صدى</span>
+            <span class="brand__latin">SADA</span>
+          </span>
+        </a>
+        <p class="site-footer__disclaimer">صدى أداة مساعدة للتحقق من أصالة الصوت، ولا تُغني عن المصادر الرسمية والحكم البشري المختص.</p>
+      </div>
+      <div class="site-footer__meta">
+        <p>تحدي الذكاء الاصطناعي في خدمة المحتوى الإسلامي 2026</p>
+        <p>المسار الرابع: أدوات المعرفة والتحقق</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ES modules do not load from file:// — explain how to serve the project instead.
+    if (window.location.protocol === 'file:') {
+      document.getElementById('file-protocol-notice').hidden = false;
+    }
+  </script>
+</body>
+</html>

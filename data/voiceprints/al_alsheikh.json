@@ -1,0 +1,145 @@
+{
+  "sheikh_id": "al_alsheikh",
+  "name": "Sheikh Abdulaziz Al ash-Sheikh",
+  "encoder": "resemblyzer",
+  "built": "2026-10-04 17:58",
+  "scoring": "centered",
+  "enroll": "ref+real",
+  "keep": 0.7,
+  "clips": 19,
+  "recordings": [
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_01.wav",
+      "windows": 5,
+      "main_voice": 0.4,
+      "mean_similarity": 0.8317,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_02.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.905,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_03.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.8923,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_04.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.914,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_05.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.844,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_06.wav",
+      "windows": 5,
+      "main_voice": 0.4,
+      "mean_similarity": 0.8317,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_07.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.905,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_08.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.8923,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_09.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.914,
+      "flag": ""
+    },
+    {
+      "recording_id": "ref/speakerC/speakerC_ref_10.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.844,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_01.wav",
+      "windows": 5,
+      "main_voice": 0.0,
+      "mean_similarity": 0.6532,
+      "flag": "far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it"
+    },
+    {
+      "recording_id": "real/speakerC_real_04.wav",
+      "windows": 5,
+      "main_voice": 0.4,
+      "mean_similarity": 0.8111,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_07.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.8387,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_10.wav",
+      "windows": 5,
+      "main_voice": 0.4,
+      "mean_similarity": 0.8136,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_13.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.8376,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_16.wav",
+      "windows": 5,
+      "main_voice": 1.0,
+      "mean_similarity": 0.8554,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_19.wav",
+      "windows": 5,
+      "main_voice": 0.2,
+      "mean_similarity": 0.7617,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_22.wav",
+      "windows": 5,
+      "main_voice": 0.8,
+      "mean_similarity": 0.8464,
+      "flag": ""
+    },
+    {
+      "recording_id": "real/speakerC_real_25.wav",
+      "windows": 5,
+      "main_voice": 0.6,
+      "mean_similarity": 0.8163,
+      "flag": ""
+    }
+  ]
+}

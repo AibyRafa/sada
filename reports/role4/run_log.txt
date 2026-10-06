@@ -1,0 +1,313 @@
+Role 4 run 04/10/2026 17:58:19.85 
+===== install ===== 
+Requirement already satisfied: pip in .\.venv-role4\Lib\site-packages (26.2.1)
+Requirement already satisfied: numpy>=1.24 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 3)) (2.5.3)
+Requirement already satisfied: scipy<2.0,>=1.10 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 4)) (1.18.1)
+Requirement already satisfied: librosa>=0.10 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.0.0)
+Requirement already satisfied: soundfile>=0.12 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 6)) (0.14.0)
+Requirement already satisfied: webrtcvad-wheels>=2.0.10 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 7)) (2.0.14.post1)
+Requirement already satisfied: pyyaml>=6.0 in .\.venv-role4\Lib\site-packages (from -r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 8)) (6.0.3)
+Requirement already satisfied: numba>=0.61.0 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (0.68.0)
+Requirement already satisfied: scikit-learn>=1.6.0 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.9.1)
+Requirement already satisfied: joblib>=1.2 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.6.0)
+Requirement already satisfied: decorator>=5.2.1 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (5.3.1)
+Requirement already satisfied: pooch>=1.7 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.9.0)
+Requirement already satisfied: soxr>=1.0.0 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.1.0)
+Requirement already satisfied: lazy_loader>=0.3 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (0.6)
+Requirement already satisfied: msgpack>=1.0.5 in .\.venv-role4\Lib\site-packages (from librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (1.2.3)
+Requirement already satisfied: cffi>=1.0 in .\.venv-role4\Lib\site-packages (from soundfile>=0.12->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 6)) (2.1.1)
+Requirement already satisfied: typing-extensions in .\.venv-role4\Lib\site-packages (from soundfile>=0.12->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 6)) (4.16.0)
+Requirement already satisfied: pycparser in .\.venv-role4\Lib\site-packages (from cffi>=1.0->soundfile>=0.12->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 6)) (3.0)
+Requirement already satisfied: cloudpickle>=3.0 in .\.venv-role4\Lib\site-packages (from joblib>=1.2->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (3.1.2)
+Requirement already satisfied: packaging in .\.venv-role4\Lib\site-packages (from lazy_loader>=0.3->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (26.3)
+Requirement already satisfied: llvmlite<0.51,>=0.50.0dev0 in .\.venv-role4\Lib\site-packages (from numba>=0.61.0->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (0.50.0)
+Requirement already satisfied: platformdirs>=2.5.0 in .\.venv-role4\Lib\site-packages (from pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (4.12.3)
+Requirement already satisfied: requests>=2.19.0 in .\.venv-role4\Lib\site-packages (from pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (2.34.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\.venv-role4\Lib\site-packages (from requests>=2.19.0->pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in .\.venv-role4\Lib\site-packages (from requests>=2.19.0->pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in .\.venv-role4\Lib\site-packages (from requests>=2.19.0->pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in .\.venv-role4\Lib\site-packages (from requests>=2.19.0->pooch>=1.7->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (2026.7.22)
+Requirement already satisfied: narwhals>=2.0.1 in .\.venv-role4\Lib\site-packages (from scikit-learn>=1.6.0->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (2.26.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in .\.venv-role4\Lib\site-packages (from scikit-learn>=1.6.0->librosa>=0.10->-r C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\requirements-role4.txt (line 5)) (3.7.0)
+Requirement already satisfied: resemblyzer in .\.venv-role4\Lib\site-packages (0.1.4)
+===== tests ===== 
+PASS test_centered_scoring_widens_the_gap
+role-4 id    role-1 name    ref  enroll   cal  test
+al_alsheikh  speakerC         6       2     2     2
+al_fawzan    speakerB         6       2     2     2
+ibn_baz      speakerA         7       2     2     2
+other        speakerX         0       0     3     3
+other        tts1             0       0     3     3
+
+--- method: raw / enroll ref
+  embedded 19 enrol-ref clips (clean) in 1 s
+  embedded 12 cal clips (clean) in 0 s
+  embedded 12 cal clips (phone) in 1 s
+  embedded 12 cal clips (noisy) in 0 s
+  embedded 12 test clips (clean) in 0 s
+  embedded 12 test clips (phone) in 0 s
+  embedded 12 test clips (noisy) in 0 s
+| raw / enroll ref | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+--- method: centered / enroll ref
+| centered / enroll ref | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+--- method: raw / enroll ref+real
+  embedded 6 enrol-enroll clips (clean) in 0 s
+| raw / enroll ref+real | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+--- method: centered / enroll ref+real
+| centered / enroll ref+real | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+--- method: raw / enroll ref+real+phone
+  embedded 19 enrol-ref clips (phone) in 0 s
+  embedded 6 enrol-enroll clips (phone) in 0 s
+| raw / enroll ref+real+phone | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+--- method: centered / enroll ref+real+phone
+| centered / enroll ref+real+phone | 0.0% | 6/6 | 100% | 100% | 0% | 6/6 | 6/6 |
+
+Chosen: raw / enroll ref (saved in voiceid/thresholds.yaml). Report: reports\role4\compare.md
+  embedded 19 enrol-ref clips (clean) in 0 s
+al_alsheikh: 6 clips, 30 windows; clip similarity to the voiceprint median 0.991, lowest 0.989
+al_fawzan: 6 clips, 30 windows; clip similarity to the voiceprint median 0.993, lowest 0.988
+ibn_baz: 7 clips, 35 windows; clip similarity to the voiceprint median 0.998, lowest -0.870
+  FLAG ref/speakerA/speakerA_ref_99.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity -0.870)
+Saved to data\voiceprints. Report: reports\role4\voiceprints.md
+  embedded 19 enrol-ref clips (clean) in 0 s
+  embedded 12 cal clips (clean) in 0 s
+  embedded 12 cal clips (phone) in 0 s
+  embedded 12 cal clips (noisy) in 0 s
+
+## Identity calibration — 2026-10-04 17:58
+
+- Method: raw / enroll ref. Encoder fake; windows 3 s, hop 1.5 s; clip score = 75th percentile; clip conditions: clean, phone, noisy
+- Cal split (al_alsheikh: 2, al_fawzan: 2, ibn_baz: 2, speakerX: 3, tts1: 3); the test split is kept for evaluate.
+- Trials: 18 genuine, 36 other-mufti, 54 other-voice
+- Genuine: median 0.975, 5-95% 0.901 to 1.000
+- Other mufti: median -0.371, 5-95% -0.888 to 0.753
+- Other voice: median 0.060, 5-95% -0.638 to 0.467
+- Clip-level EER: 0.0% at 0.900
+- Thresholds (max 5% wrong per side): low 0.730, high 0.901
+- Speaker change: 76 same-voice / 3000 different-voice window pairs, EER 1.6% at similarity 0.953
+- Caveat: clips of one mufti may come from the same few source videos; clips found online are harder.
+
+Only 18 genuine / 90 impostor trials (< 20). Use --force to save anyway.
+Saved voiceid/thresholds.yaml and reports\role4\calibration.md
+  embedded 12 test clips (clean) in 0 s
+  embedded 12 test clips (phone) in 0 s
+  embedded 12 test clips (noisy) in 0 s
+
+### clean: 6 mufti clips
+- Closest voiceprint is the right mufti: 6/6 (100%)
+- Attributed to the RIGHT mufti: match 100%, unclear 0%, mismatch 0%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 100%, unclear 0%, match 0%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.998, lowest 5% below 0.996
+- al_alsheikh: 2 clips | closest = right 2/2 | match 2/2
+- al_fawzan: 2 clips | closest = right 2/2 | match 2/2
+- ibn_baz: 2 clips | closest = right 2/2 | match 2/2
+
+### phone: 6 mufti clips
+- Closest voiceprint is the right mufti: 6/6 (100%)
+- Attributed to the RIGHT mufti: match 100%, unclear 0%, mismatch 0%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 100%, unclear 0%, match 0%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.972, lowest 5% below 0.957
+- al_alsheikh: 2 clips | closest = right 2/2 | match 2/2
+- al_fawzan: 2 clips | closest = right 2/2 | match 2/2
+- ibn_baz: 2 clips | closest = right 2/2 | match 2/2
+
+### noisy: 6 mufti clips
+- Closest voiceprint is the right mufti: 6/6 (100%)
+- Attributed to the RIGHT mufti: match 67%, unclear 33%, mismatch 0%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 100%, unclear 0%, match 0%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.947, lowest 5% below 0.896
+- al_alsheikh: 2 clips | closest = right 2/2 | match 2/2
+- al_fawzan: 2 clips | closest = right 2/2 | match 0/2
+- ibn_baz: 2 clips | closest = right 2/2 | match 2/2
+
+Report: reports\role4\evaluation.md
+speakerA_real_01.wav: 8.0 s in 0.0 s
+STATUS MATCH | score 0.9995 | compared with ibn_baz | closest ibn_baz
+per mufti: ibn_baz 1.000, al_alsheikh 0.737, al_fawzan -0.867
+thresholds: low 0.73 | high 0.9007 | calibrated: True
+     0.0-   3.0   0.984  #######################################
+     1.5-   4.5   0.999  #######################################
+     3.0-   6.0   0.985  #######################################
+     4.5-   7.5   1.000  #######################################
+     5.0-   8.0   1.000  #######################################
+speaker changes at: none
+PASS test_cli_all_on_role1_layout
+PASS test_dataset_maps_role1_names_and_splits
+PASS test_decide_never_matches_when_another_mufti_fits_better
+PASS test_degrade_phone_removes_high_frequencies
+PASS test_identity_score_and_speaker_change
+PASS test_resemblyzer_wrapper_uses_training_preprocessing
+PASS test_speakers_yaml_matches_role1_manifest_names
+PASS test_trials_and_evaluation
+PASS test_voiceprint_flags_mislabelled_reference_clip
+PASS test_voiceprint_groups_keep_a_small_session
+all passed
+
+==================== check ====================
+Python 3.12.13 (C:\Users\Jana7\Downloads\معالجة صوت\معالجة صوت\.venv-role4\Scripts\python.exe)
+  numpy        2.5.3
+  scipy        1.18.1
+  yaml         6.0.3
+  soundfile    0.14.0
+  librosa      1.0.0
+  torch        2.14.1+cpu
+  webrtcvad    2.0.14.post1
+  resemblyzer  ok
+  role 1 loader: not importable here, using librosa directly
+OK: Resemblyzer loaded in 0.0 s; one 3 s window in 1295 ms.
+
+==================== data ====================
+role-4 id    role-1 name    ref  enroll   cal  test
+al_alsheikh  speakerC        10       9     9     9
+al_fawzan    speakerB         7      11    11    11
+ibn_baz      speakerA        91      27    27    27
+other        speakerX         0       0     5     5
+other        tts1             0       0     5     5
+other        tts2             0       0     5     5
+other        tts3             0       0     5     5
+
+==================== compare ====================
+
+--- method: raw / enroll ref
+    enrol-ref clean: 50/108 clips (0 s)
+    enrol-ref clean: 100/108 clips (0 s)
+  embedded 108 enrol-ref clips (clean) in 0 s
+    cal clean: 50/67 clips (0 s)
+  embedded 67 cal clips (clean) in 0 s
+    cal phone: 50/67 clips (0 s)
+  embedded 67 cal clips (phone) in 0 s
+    cal noisy: 50/67 clips (4 s)
+  embedded 67 cal clips (noisy) in 6 s
+    test clean: 50/67 clips (0 s)
+  embedded 67 test clips (clean) in 0 s
+    test phone: 50/67 clips (0 s)
+  embedded 67 test clips (phone) in 0 s
+    test noisy: 50/67 clips (0 s)
+  embedded 67 test clips (noisy) in 0 s
+| raw / enroll ref | 27.0% | 21/47 | 40% | 64% | 20% | 25/47 | 23/47 |
+
+--- method: centered / enroll ref
+| centered / enroll ref | 28.4% | 21/47 | 38% | 57% | 19% | 17/47 | 21/47 |
+
+--- method: raw / enroll ref+real
+  embedded 47 enrol-enroll clips (clean) in 0 s
+| raw / enroll ref+real | 16.5% | 46/47 | 91% | 91% | 0% | 38/47 | 47/47 |
+
+--- method: centered / enroll ref+real
+| centered / enroll ref+real | 9.4% | 45/47 | 94% | 96% | 2% | 43/47 | 47/47 |
+
+--- method: raw / enroll ref+real+phone
+    enrol-ref phone: 50/108 clips (0 s)
+    enrol-ref phone: 100/108 clips (0 s)
+  embedded 108 enrol-ref clips (phone) in 0 s
+  embedded 47 enrol-enroll clips (phone) in 0 s
+| raw / enroll ref+real+phone | 12.0% | 45/47 | 91% | 95% | 1% | 46/47 | 47/47 |
+
+--- method: centered / enroll ref+real+phone
+| centered / enroll ref+real+phone | 11.3% | 43/47 | 89% | 95% | 4% | 46/47 | 46/47 |
+
+Chosen: centered / enroll ref+real (saved in voiceid/thresholds.yaml). Report: reports\role4\compare.md
+
+==================== build ====================
+    enrol-ref clean: 50/108 clips (0 s)
+    enrol-ref clean: 100/108 clips (0 s)
+  embedded 108 enrol-ref clips (clean) in 0 s
+  embedded 47 enrol-enroll clips (clean) in 0 s
+  embedded 20 cal-other clips (clean) in 0 s
+al_alsheikh: 19 clips, 95 windows; clip similarity to the voiceprint median 0.844, lowest 0.653
+  FLAG real/speakerC_real_01.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.653)
+al_fawzan: 17 clips, 82 windows; clip similarity to the voiceprint median 0.562, lowest 0.315
+  FLAG ref/speakerB/speakerB_ref_01.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.315)
+  FLAG ref/speakerB/speakerB_ref_02.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.360)
+ibn_baz: 118 clips, 570 windows; clip similarity to the voiceprint median 0.651, lowest 0.109
+  FLAG real/speakerA_real_13.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.109)
+  FLAG real/speakerA_real_25.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.500)
+  FLAG real/speakerA_real_31.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.430)
+  FLAG real/speakerA_real_34.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.412)
+  FLAG real/speakerA_real_37.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.515)
+  FLAG real/speakerA_real_67.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.474)
+  FLAG real/speakerA_real_70.wav: far from this voiceprint: another speaker, a wrong label, or a very different recording? listen to it (similarity 0.420)
+Saved to data\voiceprints. Report: reports\role4\voiceprints.md
+
+==================== calibrate ====================
+    enrol-ref clean: 50/108 clips (0 s)
+    enrol-ref clean: 100/108 clips (0 s)
+  embedded 108 enrol-ref clips (clean) in 0 s
+  embedded 47 enrol-enroll clips (clean) in 0 s
+  embedded 20 cal-other clips (clean) in 0 s
+  embedded 47 cal clips (clean) in 0 s
+    cal phone: 50/67 clips (0 s)
+  embedded 67 cal clips (phone) in 0 s
+    cal noisy: 50/67 clips (0 s)
+  embedded 67 cal clips (noisy) in 0 s
+
+## Identity calibration — 2026-10-04 17:58
+
+- Method: centered / enroll ref+real. Encoder resemblyzer; windows 3 s, hop 1.5 s; clip score = 75th percentile; clip conditions: clean, phone, noisy
+- Cal split (al_alsheikh: 9, al_fawzan: 11, ibn_baz: 27, speakerX: 5, tts1: 5, tts2: 5, tts3: 5); the test split is kept for evaluate.
+- Trials: 141 genuine, 282 other-mufti, 180 other-voice
+- Genuine: median 0.489, 5-95% 0.280 to 0.755
+- Other mufti: median 0.157, 5-95% -0.015 to 0.388
+- Other voice: median -0.132, 5-95% -0.435 to 0.071
+- Clip-level EER: 9.4% at 0.321
+- Thresholds (max 5% wrong per side): low 0.280, high 0.368
+- Speaker change: 593 same-voice / 2982 different-voice window pairs, EER 3.5% at similarity 0.548
+- Caveat: clips of one mufti may come from the same few source videos; clips found online are harder.
+
+Saved voiceid/thresholds.yaml and reports\role4\calibration.md
+
+==================== evaluate ====================
+    test clean: 50/67 clips (0 s)
+  embedded 67 test clips (clean) in 0 s
+    test phone: 50/67 clips (0 s)
+  embedded 67 test clips (phone) in 0 s
+    test noisy: 50/67 clips (0 s)
+  embedded 67 test clips (noisy) in 0 s
+
+### clean: 47 mufti clips
+- Closest voiceprint is the right mufti: 45/47 (96%)
+- Attributed to the RIGHT mufti: match 94%, unclear 4%, mismatch 2%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 96%, unclear 2%, match 2%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.664, lowest 5% below 0.443
+- al_alsheikh: 9 clips | closest = right 9/9 | match 9/9
+- al_fawzan: 11 clips | closest = right 9/11 | match 9/11
+- ibn_baz: 27 clips | closest = right 27/27 | match 26/27
+
+### phone: 47 mufti clips
+- Closest voiceprint is the right mufti: 43/47 (91%)
+- Attributed to the RIGHT mufti: match 74%, unclear 17%, mismatch 9%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 93%, unclear 5%, match 2%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.420, lowest 5% below 0.259
+- al_alsheikh: 9 clips | closest = right 6/9 | match 1/9
+- al_fawzan: 11 clips | closest = right 11/11 | match 11/11
+- ibn_baz: 27 clips | closest = right 26/27 | match 23/27
+
+### noisy: 47 mufti clips
+- Closest voiceprint is the right mufti: 47/47 (100%)
+- Attributed to the RIGHT mufti: match 83%, unclear 13%, mismatch 4%   (want: mostly match, mismatch ~0)
+- Attributed to the WRONG mufti: mismatch 99%, unclear 1%, match 0%   (want: mostly mismatch, match ~0)
+- Other real voice vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Generated speech (TTS, not a cloned mufti) vs any mufti: match 0% (want ~0), unclear 0%, mismatch 100%
+- Right-mufti clip scores: median 0.475, lowest 5% below 0.317
+- al_alsheikh: 9 clips | closest = right 9/9 | match 9/9
+- al_fawzan: 11 clips | closest = right 11/11 | match 6/11
+- ibn_baz: 27 clips | closest = right 27/27 | match 24/27
+
+Report: reports\role4\evaluation.md
+
+ALL DONE. Reports in reports/role4/

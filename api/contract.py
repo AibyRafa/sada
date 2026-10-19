@@ -2,8 +2,8 @@
 
 Mapping rules (honest by design):
   status
-    likely_authentic  the voice matches the attributed mufti AND (the clip was found in an original recording
-                      OR the generated-speech check shows no signs). A voice match alone is never enough.
+    likely_authentic  the voice matches the attributed mufti AND the clip was found in an original recording
+                      AND it is not edited. A voice match (even with no signs of generated speech) is never enough.
     likely_synthetic  the generated-speech score reaches its calibrated threshold AND the clip was NOT found
                       in any original recording.
     inconclusive      everything else (voice not confirmed, voice of another mufti, nothing to compare with...).
@@ -89,7 +89,10 @@ def build_result(v, *, speaker_id: str, duration: float, identity_thresholds: di
     voice_ok = voice.status in ("match", "identified")
 
     status, confidence, threshold = "inconclusive", None, None
-    if voice_ok and (found or gen.status == "no_signs"):
+    # "likely authentic" needs the clip itself in an original recording, unedited. A voice match plus
+    # "no signs of generated speech" is not enough: a good voice clone passes both (the generated-speech
+    # model has seen 3 public TTS voices only), and an edited clip is not "authentic" even if its voice is.
+    if voice_ok and found and edit.status == "not_edited":
         status = "likely_authentic"
         high = artifact_settings.get("high")
         if art is not None and high is not None and 1.0 - art >= 1.0 - high:

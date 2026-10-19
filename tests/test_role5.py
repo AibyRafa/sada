@@ -238,6 +238,10 @@ def test_api_contract_mapping():
     assert r["splice_analysis"]["findings"] == []
     r = build_result(V("match", "original_recording", "not_edited", "excerpt", art=0.7), **kw)   # model unsure:
     assert r["status"] == "likely_authentic" and r["confidence"] is None                          # no number shown
+    r = build_result(V("match", "no_signs", "unknown", "unknown"), **kw)      # no original: a clone could pass both
+    assert r["status"] == "inconclusive" and r["confidence"] is None
+    r = build_result(V("match", "original_recording", "edited", "assembled"), **kw)   # edited is never "authentic"
+    assert r["status"] == "inconclusive" and r["confidence"] is None
     r = build_result(V("match", "unclear", "unknown", "unknown"), **kw)        # voice match alone is not enough
     assert r["status"] == "inconclusive" and "splice_analysis" not in r
     r = build_result(V("unclear", "suspicious", "unknown", "unknown", art=0.9), **kw)
